@@ -7,7 +7,9 @@ import { Estate } from "../components/Estate";
 const pathname = window.location.pathname;
 let apiURL = "";
 
-if (pathname === "/dum01.html") {
+if (pathname === "/" || pathname === "/index.html") {
+  window.location.pathname = "/dum01.html";
+} else if (pathname === "/dum01.html") {
   apiURL = "https://apps.kodim.cz/daweb/trening-api/apis/realitka/dum01";
 } else if (pathname === "/dum02.html") {
   apiURL = "https://apps.kodim.cz/daweb/trening-api/apis/realitka/dum02";
